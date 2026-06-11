@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Multi-Agent Expense Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 24px; }
+      label { display:block; margin-top:8px }
+      input, textarea { width: 400px }
+      pre { background:#f4f4f4; padding:12px }
+    </style>
+  </head>
+  <body>
+    <h1>Multi-Agent Expense Approval Demo</h1>
+    <form id="expenseForm">
+      <label>ID <input name="id" value="e1" /></label>
+      <label>Amount <input name="amount" value="45.0" /></label>
+      <label>Merchant <input name="merchant" value="Cafe Goodfood" /></label>
+      <label>Description <input name="description" value="Lunch with client" /></label>
+      <label>Receipt <input type="checkbox" name="receipt" checked /></label>
+      <div style="margin-top:12px">
+        <button type="submit">Process Expense</button>
+      </div>
+    </form>
+
+    <h2>Result</h2>
+    <pre id="result">(no result yet)</pre>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
