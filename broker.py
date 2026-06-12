@@ -1,5 +1,6 @@
 import asyncio
 from typing import Callable, Dict, List, Any
+import traceback
 
 
 class Broker:
@@ -33,7 +34,9 @@ class Broker:
                         res = await coro
                 if res is not None:
                     return res
-            except Exception:
+            except Exception as e:
+                print(f"Broker: handler {h} raised exception: {e}")
+                traceback.print_exc()
                 continue
 
         return None
